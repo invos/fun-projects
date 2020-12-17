@@ -27,6 +27,10 @@ body {
   box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
 }
 
+.projects-container li{
+  margin-bottom: 10px;
+}
+
 .project-title {
   text-decoration: none;
   color: #000;
