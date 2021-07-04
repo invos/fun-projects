@@ -3,7 +3,7 @@ const imageContainer = document.getElementById('image-container');
 const loader = document.getElementById('loader');
 
 const count = 5;
-const apiKey = ''; // get api key from https://api.unsplash.com
+const apiKey = config?.keys?.unsplash; // get api key from https://api.unsplash.com
 const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count}`;
 
 let ready = false;
@@ -60,7 +60,7 @@ async function getPhotos() {
     loader.hidden = true;
   } catch (error) {
     loader.hidden = true;
-    if (apiKey === '') {
+    if (!apiKey) {
       imageContainer.innerText = 'API key is not provided! Please get a API key for from https://api.unsplash.com';
     }
   }
